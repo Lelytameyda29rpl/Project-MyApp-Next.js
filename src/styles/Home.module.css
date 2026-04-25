@@ -227,3 +227,126 @@
     transform: rotate(0deg);
   }
 }
+
+.aboutContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+  padding: 20px;
+}
+
+.card {
+  background-color: linear-gradient(145deg, #ffffff 0%, #f8faff 100%);
+  padding: 40px;
+  border-radius: 1px solid rgba(0, 112, 243, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 500px;
+}
+
+.card h1 {
+  margin-bottom: 30px;
+  color: #1e4a8b;
+  text-align: center;
+  font-size: 28px;
+  border-bottom: 3px solid #3b82f6;
+  padding-bottom: 15px;
+}
+
+.infoRow {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
+  line-height: 1.6;
+}
+
+.label {
+  font-weight: bold;
+  min-width: 150px;  
+  color: #333;
+  font-size: 18px;
+  padding-right: 15px;  
+}
+
+.value {
+  font-size: 18px;
+  color: #111;
+  flex: 1;  
+}
+
+.namaContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;  
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.button {
+  background-color: #0070f3;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #005bb5;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.button:hover {
+  background: #5563d1;
+}
+
+.link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

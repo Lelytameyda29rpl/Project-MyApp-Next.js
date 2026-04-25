@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Product Page renders product page correctly 1`] = `
+<div>
+  <div>
+    <h1
+      data-testid="title"
+    >
+      Product Page
+    </h1>
+    <p>
+      Laptop
+    </p>
+  </div>
+</div>
+`;

@@ -200,11 +200,12 @@ const Tampilanlogin = () => {
           </button>
           <br /> <br />
           <button
+          type="button"
             onClick={() => signIn("google", { callbackUrl, redirect: false })}
             className={style.login__form__submit}
-            disabled={isLoading}
+            
           >
-            {isLoading ? "Loading..." : "Sign in with google"}
+            Sign in with Google
           </button>
         </form>
 

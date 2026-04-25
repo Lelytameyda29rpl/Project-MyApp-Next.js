@@ -294,26 +294,26 @@
 
 // export default kategori;
 
-// type ProductType = {
-//   id: number;
-//   name: string;
-// };
+type ProductType = {
+  id: number;
+  name: string;
+};
 
-// const TampilanProduk = ({ products = [] }: { products?: ProductType[] }) => {
-//   return (
-//     <div>
-//       <h1 data-testid="title">Product Page</h1>
+const TampilanProduk = ({ products = [] }: { products?: ProductType[] }) => {
+  return (
+    <div>
+      <h1 data-testid="title">Product Page</h1>
 
-//       {products?.length > 0 ? (
-//         products.map((product) => (
-//           <p key={product.id}>{product.name}</p>
-//         ))
-//       ) : (
-//         <p data-testid="empty">No Product</p>
-//       )}
-//     </div>
-//   );
-// };
+      {products?.length > 0 ? (
+        products.map((product) => (
+          <p key={product.id}>{product.name}</p>
+        ))
+      ) : (
+        <p data-testid="empty">No Product</p>
+      )}
+    </div>
+  );
+};
 
-// export default TampilanProduk;
+export default TampilanProduk;
 

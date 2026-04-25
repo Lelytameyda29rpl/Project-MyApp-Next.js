@@ -1,33 +1,5 @@
-// import { render,screen } from "@testing-library/react"
-// import TampilanProduk from "@/pages/produk"
-
-// jest.mock("next/router", () => ({
-//   useRouter() {
-//     return {
-//       route: "/product",
-//       pathname: "",
-//       query: {},
-//       asPath: "",
-//       push: jest.fn(),
-//       event: {
-//         on: jest.fn(),
-//         off: jest.fn(),
-//       },
-//       isReady: true,
-//     }
-//   },
-// }))
-
-// describe("Product Page", () => {
-//   it("renders product page correctly", () => {
-//     const page = render(<TampilanProduk />)
-//     // expect(screen.getByTestId("title").textContent).toBe("Product Page")
-//     expect(page).toMatchSnapshot()
-//   })
-// })
-
-import { render, screen } from "@testing-library/react";
-import TampilanProduk from "@/pages/produk";
+import { render,screen } from "@testing-library/react"
+import TampilanProduk from "@/pages/produk"
 
 jest.mock("next/router", () => ({
   useRouter() {
@@ -37,22 +9,50 @@ jest.mock("next/router", () => ({
       query: {},
       asPath: "",
       push: jest.fn(),
-    };
+      event: {
+        on: jest.fn(),
+        off: jest.fn(),
+      },
+      isReady: true,
+    }
   },
-}));
+}))
 
 describe("Product Page", () => {
   it("renders product page correctly", () => {
-    const { container } = render(
-      <TampilanProduk products={[{ id: 1, name: "Laptop" }]} />
-    );
+    const page = render(<TampilanProduk />)
+    // expect(screen.getByTestId("title").textContent).toBe("Product Page")
+    expect(page).toMatchSnapshot()
+  })
+})
 
-    expect(screen.getByTestId("title").textContent).toBe("Product Page"); // toBe + getByTestId
-    expect(container).toMatchSnapshot(); // snapshot
-  });
+// import { render, screen } from "@testing-library/react";
+// import TampilanProduk from "@/pages/produk";
 
-  it("shows empty state", () => {
-    render(<TampilanProduk products={[]} />);
-    expect(screen.getByTestId("empty").textContent).toBe("No Product");
-  });
-});
+// jest.mock("next/router", () => ({
+//   useRouter() {
+//     return {
+//       route: "/product",
+//       pathname: "",
+//       query: {},
+//       asPath: "",
+//       push: jest.fn(),
+//     };
+//   },
+// }));
+
+// describe("Product Page", () => {
+//   it("renders product page correctly", () => {
+//     const { container } = render(
+//       <TampilanProduk products={[{ id: 1, name: "Laptop" }]} />
+//     );
+
+//     expect(screen.getByTestId("title").textContent).toBe("Product Page"); // toBe + getByTestId
+//     expect(container).toMatchSnapshot(); // snapshot
+//   });
+
+//   it("shows empty state", () => {
+//     render(<TampilanProduk products={[]} />);
+//     expect(screen.getByTestId("empty").textContent).toBe("No Product");
+//   });
+// });
